@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "../utils/variables" as *;
+
+
+.menu__container {
+    display: none;
+    & -visible {
+    background-color: $strong-secondary-color;
+    padding-right: 1rem;
+    width: 12rem;
+    position: fixed;
+    left: 0;
+    height: calc(100vh - 4.5rem);
+    z-index: 1;
+    display: block;
+    @media screen and (min-width: map.get($grid-breakpoints, md)){
+        display: none;
+    }
+        .menu__navigation {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                li {
+                    list-style: none;
+                    a {
+                        text-decoration: none;
+                        color: $light-secondary-color;
+                        &:hover {
+                            color: $strong-primary-color;
+                        };
+                        &:visited{
+                            color: $light-primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

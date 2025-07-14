@@ -1,0 +1,45 @@
+@use "../utils/variables" as *;
+
+
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    &__primary {
+        background-color: $primary-color;
+        color: $white-color;
+        border: 1px solid $strong-primary-color;
+        &:hover {
+            background-color: $strong-primary-color;
+        }
+    &-outline {
+        background-color: transparent;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+        &:hover {
+            color: $strong-primary-color;
+            border-color: $strong-primary-color;
+        }
+     }
+  };
+    &__secondary {
+        background-color: $secondary-color;
+        color: $white-color;
+        border: 1px solid $strong-secondary-color;
+        &:hover {
+            background-color: $strong-secondary-color;
+        }
+    &-outline {
+        background-color: transparent;
+        color: $secondary-color;
+        border: 2px solid $secondary-color;
+        &:hover {
+            color: $strong-secondary-color;
+            border-color: $strong-secondary-color;
+        }
+     }
+  };
+  img {
+    min-width: 1rem;
+  }
+}

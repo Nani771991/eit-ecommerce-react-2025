@@ -1,0 +1,14 @@
+@use "../utils/variables" as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background-color: $superlight-primary-color;
+    border: 2px solid $strong-primary-color;
+    min-height: 400px;
+    img {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+}
