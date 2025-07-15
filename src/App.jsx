@@ -1,14 +1,8 @@
-import Footer from "./layout/Footer"
-import Header from "./layout/Header"
-import Home from "./pages/Home"
+import AppRoutes from "./routes/AppRoutes"
 
 function App() {
     return (
-        <div>
-            <Header />
-            <Home />
-            <Footer />
-        </div>
+        <AppRoutes />
     )
 }
 

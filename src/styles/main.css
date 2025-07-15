@@ -1250,10 +1250,23 @@ h1, h3 {
   background-color: #d9ece8;
   border: 2px solid #eb4d42;
   min-height: 400px;
+  height: 100%;
+  width: 100%;
 }
 .card img {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+}
+.card .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.card .card__content .card__price {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .form__container .form__label {
