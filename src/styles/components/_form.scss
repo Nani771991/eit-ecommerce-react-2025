@@ -1,15 +1,17 @@
 @use "../utils/variables" as *;
 
 .form__container {
-    .form__label {
-        display: block;
-        &[required] {
-            &::after {
-                content: " (*)";
-                color: $danger-color;
-            }
-        }        
-    }
+    .form__input-group {
+        margin-bottom: 0.5rem;
+        .form__label {
+            display: block;
+            &[required] {
+                &::after {
+                    content: " (*)";
+                    color: $danger-color;
+                }
+            }        
+        }
     .form__input {
         display: block;
         margin-top: 0.5rem 0;
@@ -25,6 +27,9 @@
         }
         &.with-error {
             border-color: $danger-color;
+            &:focus-visible {
+                outline-color: $danger-color;
+            }
         }
         &:focus-visible {
             outline-color: $strong-secondary-color;
@@ -42,5 +47,6 @@
         justify-content: center;
         gap: 1rem;
         margin-top: 1rem;
+    }
     }
 }

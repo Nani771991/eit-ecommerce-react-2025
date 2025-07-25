@@ -1269,14 +1269,17 @@ h1, h3 {
   align-items: end;
 }
 
-.form__container .form__label {
+.form__container .form__input-group {
+  margin-bottom: 0.5rem;
+}
+.form__container .form__input-group .form__label {
   display: block;
 }
-.form__container .form__label[required]::after {
+.form__container .form__input-group .form__label[required]::after {
   content: " (*)";
   color: #900000;
 }
-.form__container .form__input {
+.form__container .form__input-group .form__input {
   display: block;
   margin-top: 0.5rem 0;
   background-color: #58cee0;
@@ -1285,23 +1288,26 @@ h1, h3 {
   padding: 0.5rem;
   width: calc(100% - 1.25rem);
 }
-.form__container .form__input[type=checkbox] {
+.form__container .form__input-group .form__input[type=checkbox] {
   display: flex;
   width: 2rem;
   margin-top: 0;
 }
-.form__container .form__input.with-error {
+.form__container .form__input-group .form__input.with-error {
   border-color: #900000;
 }
-.form__container .form__input:focus-visible {
+.form__container .form__input-group .form__input.with-error:focus-visible {
+  outline-color: #900000;
+}
+.form__container .form__input-group .form__input:focus-visible {
   outline-color: #03aec9;
 }
-.form__container .form__error {
+.form__container .form__input-group .form__error {
   color: #900000;
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
 }
-.form__container .form__submit {
+.form__container .form__input-group .form__submit {
   width: 100%;
   display: flex;
   justify-content: center;
