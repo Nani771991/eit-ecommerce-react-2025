@@ -1,6 +1,8 @@
+import Box from '../components/Box'
 import Container from '../components/Container'
 import Form from '../components/Form'
 import Text from '../components/Text'
+
 import { useForm } from "../hooks/useForm"
 import { postContact } from '../utils/api'
 
@@ -47,38 +49,41 @@ function ContactUs() {
     }
 
     return (
-          <Container as="main">
-              <Text as="h2">Contactanos</Text>
-              <Form 
-                  values={values}
-                  errors={errors}
-                  onChange={onChange}
-                  onSubmit={handleSubmit}
-                  inputsArray={[
-                    {
-                      name: "name",
-                      type: "text",
-                      label: "Nombre"
-                    },
-                    {
-                      name: "email",
-                      type: "email",
-                      label: "e-Mail"
-                    },
-                    {
-                      name: "subject",
-                      type: "text",
-                      label: "Asunto"
-                    },
-                    {
-                      name: "message",
-                      type: "text",
-                      label: "Mensaje"
-                    }
-                  ]}
-              />
-          </Container>
-        )
-  }
-
+        <Container as="main">
+        <Text as="h2">Contactanos</Text>
+        <Box className="grid">
+            <Box className="col-xs-12 col-md-6 col-lg-5 col-xl-4">
+                <Form 
+                    values={values}
+                    errors={errors}
+                    onChange={onChange}
+                    onSubmit={handleSubmit}
+                    inputsArray={[
+                        {
+                            name: "name",
+                            type: "text",
+                            label: "Nombre"
+                        },
+                        {
+                            name: "email",
+                            type: "email",
+                            label: "e-Mail"
+                        },
+                        {
+                            name: "subject",
+                            type: "text",
+                            label: "Asunto"
+                        },
+                        {
+                            name: "message",
+                            type: "text",
+                            label: "Mensaje"
+                        },
+                    ]}
+                />
+            </Box>
+        </Box>
+    </Container>
+  )
+}
 export default ContactUs

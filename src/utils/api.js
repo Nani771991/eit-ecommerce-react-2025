@@ -9,6 +9,11 @@ export const getProducts = async () => {
     return resp.data
 }
 
+export const postProduct = async body => {
+    const resp = await axiosInstance.post("/market-products", body)
+    return resp.data
+}
+
 export const postContact = async body => {
     const resp = await axiosInstance.post("/contacts", body)
     return resp.data

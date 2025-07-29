@@ -16,7 +16,7 @@ function Form({
         {
             inputsArray.map(
                 ({name, label, type}) =>
-                    <Box key={name} className="form__input-group">
+                    <Box key={name} className={`form__input-group${ type === "checkbox" ? " d-flex flex-d-row-reverse align-center justify-end pt-2 pb-4" : ""}`}>
                         <Text as='label' className="form__label" htmlFor={name}>{label}</Text>
                         <input 
                             id={name} 
