@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 
@@ -11,9 +11,19 @@ function Counter({
     product 
 }) {
 
-    const [counter, setCounter] = useState(0);
-    const { setQuantity } = useContext(CartContext)
+    const { cart, setQuantity } = useContext(CartContext)
+    const prodInCart = cart.find( ({prod}) => prod.id === product.id)
+    const [counter, setCounter] = useState(
+        prodInCart?.quantity ||
+        0
+    );
 
+    useEffect(() => {
+        if (prodInCart?.quantity !== counter) {
+            setCounter(prodInCart?.quantity || 0)
+        }
+    }, [cart])
+    
     const increment = () => {
         setCounter(counter + 1)
         setQuantity(product, counter + 1)

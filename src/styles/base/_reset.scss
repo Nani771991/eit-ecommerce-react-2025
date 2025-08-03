@@ -4,8 +4,9 @@
 body {
     background-color: $body-bg-color;
     margin: 0;
-    margin-top: 4.5rem;
+    padding-top: 4.5rem;
     // margin: 4.5rem 0;
+    position: relative;
 }
 
 main {
