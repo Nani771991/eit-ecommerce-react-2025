@@ -6,12 +6,24 @@
     align-items: center;
     background-color: $navbar-bg-color;
     box-shadow: 2px 2px 8px 1px $superlight-primary-color;
-    min-height: 4.5rem;
+    min-height: 3.75rem;
+    padding-top: 0;
+    padding-bottom: 0;
     width: 100%;
     display: flex;
     position: fixed;
     z-index: 2;
     top: 0;
+
+    .navbar__logo-icon {
+        max-height: 85px;
+        width: auto;
+        height: auto;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     .navbar__navigation {
         ul {
             display: flex;

@@ -6,6 +6,7 @@ import Text from "../components/Text"
 import Cart from "../components/Cart"
 
 import brandImage from "../assets/brand-image.png"
+import brandImage2 from "../assets/Pokemania-brand.png"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
@@ -19,8 +20,8 @@ function Header() {
     <header className="navbar__container">
         <Container className="d-flex space-between">
             <NavLink to="/" className="d-flex align-center">
-                <img src={brandImage} alt="" className="mr-4"/>
-                <Text as="h1">Juguetería Cósmica</Text>
+                <img src={brandImage} alt="" />
+                <img src={brandImage2} alt="" className="navbar__logo-icon"/>
             </NavLink>
             <Box as="nav" className="navbar__navigation">
                     <ul>
